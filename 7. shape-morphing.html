@@ -1,0 +1,29 @@
+<html>
+<style>
+  path {
+    transition: all 1s ease;
+  }
+
+  path:active {
+    d: path("M220,10 L40,10 L40,220 L220,220 Z");
+    fill: #6e40aa;
+  }
+</style>
+
+<body>
+  <!-- <svg height="250" width="300">
+    <path d="M150,10 L40,200 L260,200 L260,200 Z" fill="#4c6edb" />
+  </svg> -->
+
+
+  <svg height="250" width="300">
+    <path id="sieunhanbienhinh" d="M150,10 L40,200 L260,200 L260,200 Z" fill="#4c6edb" />
+
+    <animate xlink:href="#sieunhanbienhinh" attributeName="d" begin="mousedown" end="mouseup"
+      values="M220,10 L40,10 L40,220 L220,220 Z" />
+
+    <animate xlink:href="#sieunhanbienhinh" attributeName="fill" begin="mousedown" end="mouseup" values="#6e40aa" />
+  </svg>
+</body>
+
+</html>
